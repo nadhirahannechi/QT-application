@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CMenu</class>
+ <widget class="QDialog" name="CMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1203</width>
+    <height>755</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>century gothic</family>
+    <pointsize>-1</pointsize>
+    <italic>false</italic>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>menu</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+font-family:century gothic;
+font-size :37px;
+}
+ QGroupBox {
+background:#333;
+border-radius:15px;
+}
+
+QLabel {
+color : #CD5C5C;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>90</y>
+     <width>861</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>761</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Syséme de gestion d'un parc informatique</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="utilisateur">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>170</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background: #CD5C5C;border:none;
+color:white;
+ border-radius: 15px;
+}
+QPushButton:hover
+{ color:white;
+ border-radius: 15px;
+background-color :#F08080;border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>    Users   </string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/imageedit_9_2905762923.png</normaloff>../../Downloads/imageedit_9_2905762923.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mtnc">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>320</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background: #CD5C5C;border:none;
+color:white;
+ border-radius: 15px;
+}
+QPushButton:hover
+{ color:white;
+ border-radius: 15px;
+background-color :#F08080;border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string> Maitenance</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/imageedit_3_5593706024.png</normaloff>../../Downloads/imageedit_3_5593706024.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stk">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>460</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background: #CD5C5C;border:none;
+color :white;
+ border-radius: 15px;
+}
+QPushButton:hover
+{ color:white;
+ border-radius: 15px;
+background-color :#F08080;border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Réservation</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/imageedit_5_3438388449.png</normaloff>../../Downloads/imageedit_5_3438388449.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mtr">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>170</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background: #CD5C5C;border:none;
+color:white;
+ border-radius: 15px;
+}
+QPushButton:hover
+{ color:white;
+ border-radius: 15px;
+background-color :#F08080;border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>  Matériels</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/imageedit_1_9236707770.png</normaloff>../../Downloads/imageedit_1_9236707770.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mtr_2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>310</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background: #CD5C5C;border:none;
+color:white;
+ border-radius: 15px;
+}
+QPushButton:hover
+{ color:white;
+ border-radius: 15px;
+background-color :#F08080;border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Fournisseurs</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/imageedit_9_2905762923.png</normaloff>../../Downloads/imageedit_9_2905762923.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

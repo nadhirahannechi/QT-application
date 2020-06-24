@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Menu_user</class>
+ <widget class="QDialog" name="Menu_user">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1294</width>
+    <height>705</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+font-family:century gothic;
+font-size :25px;
+}
+ QGroupBox {
+background:#333;
+border-radius:15px;
+}
+
+QLabel {
+color : #CD5C5C;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>20</y>
+     <width>561</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>761</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Syséme de gestion d'un parc informatique</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reclamation">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>350</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background: #CD5C5C;border:none;
+color:white;
+ border-radius: 15px;
+}
+QPushButton:hover
+{ color:white;
+ border-radius: 15px;
+background-color :#F08080;border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Réclamation</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/imageedit_3_5593706024.png</normaloff>../../Downloads/imageedit_3_5593706024.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reservation">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>180</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background: #CD5C5C;border:none;
+color :white;
+ border-radius: 15px;
+}
+QPushButton:hover
+{ color:white;
+ border-radius: 15px;
+background-color :#F08080;border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Réservation</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/imageedit_5_3438388449.png</normaloff>../../Downloads/imageedit_5_3438388449.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
