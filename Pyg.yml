@@ -1,0 +1,64 @@
+---
+- name: Install PGP on Windows from Artifactory
+  hosts: windows_servers
+  gather_facts: false
+
+  vars:
+    pgp_artifactory_url: "https://artifactory.mondomaine.com/pgp"
+    pgp_package_name: "PGPCommandLine-10.3.2.12260.msi"
+    pgp_temp_dir: "C:\\Temp"
+    pgp_install_dir: "C:\\Program Files\\PGP"
+    pgp_force_install: false
+
+  tasks:
+
+    - name: Ensure temp dir exists
+      win_file:
+        path: "{{ pgp_temp_dir }}"
+        state: directory
+      tags: [pgp]
+
+    - name: Check if PGP is already installed
+      win_stat:
+        path: "{{ pgp_install_dir }}\\pgp.exe"
+      register: pgp_binary
+      tags: [pgp]
+
+    - name: Get PGP version if already installed
+      win_command: "{{ pgp_install_dir }}\\pgp.exe --version"
+      register: pgp_version
+      when: pgp_binary.stat.exists
+      failed_when: false
+      changed_when: false
+      tags: [pgp]
+
+    - name: Skip installation if already installed
+      win_debug:
+        msg: "PGP already installed ({{ pgp_version.stdout }})"
+      when: pgp_binary.stat.exists and not pgp_force_install
+      tags: [pgp]
+
+    - name: Download PGP installer from Artifactory
+      win_get_url:
+        url: "{{ pgp_artifactory_url }}/{{ pgp_package_name }}"
+        dest: "{{ pgp_temp_dir }}\\{{ pgp_package_name }}"
+      when: not pgp_binary.stat.exists or pgp_force_install
+      tags: [pgp]
+
+    - name: Install PGP silently
+      win_package:
+        path: "{{ pgp_temp_dir }}\\{{ pgp_package_name }}"
+        state: present
+        arguments: "/quiet /norestart ACCEPTLICENSE=YES DISPLAYRELEASENOTES=NO"
+      when: not pgp_binary.stat.exists or pgp_force_install
+      tags: [pgp]
+
+    - name: Verify PGP installation
+      win_command: "{{ pgp_install_dir }}\\pgp.exe --version"
+      register: pgp_final_version
+      changed_when: false
+      tags: [pgp]
+
+    - win_debug:
+        msg: "Installed PGP version: {{ pgp_final_version.stdout }}"
+      tags: [pgp]
